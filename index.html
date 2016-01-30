@@ -1,0 +1,62 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="pantheon.css" />
+	<link rel="stylesheet" type="text/css" href="css/dropdown.min.css" />
+	<script type="text/javascript" src="javascript/lightdm-mockup.js"></script>
+	<script type="text/javascript" src="javascript/jquery.js"></script>
+	<script type="text/javascript" src="javascript/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="javascript/dropdown.min.js"></script>
+
+	<script type="text/javascript" src="javascript/UserController.js"></script>
+	<script type="text/javascript" src="javascript/EventListener.js"></script>
+	<script type="text/javascript" src="javascript/GUI.js"></script>
+	<script type="text/javascript" src="javascript/Clock.js"></script>
+	<script type="text/javascript" src="javascript/User.js"></script>
+	<script type="text/javascript" src="javascript/MenuController.js"></script>
+	<script type="text/javascript" src="javascript/Greeter.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			new Greeter();
+		});
+	</script>
+</head>
+
+<body>
+
+<section class="titlebar">
+	<ul>
+		<li><a href="#"><span class="fa fa-wheelchair"></span></a></li>
+		<li><a href="#" data-jq-dropdown="#languageMenu"><span class="fa fa-keyboard-o"></span></a></li>
+		<li><a href="#" data-jq-dropdown="#powerMenu"><span class="fa fa-power-off"></span></a></li>
+	</ul>
+</section>
+
+<section class="userList" id="userList">
+
+</section>
+
+<section class="clock">
+	<label id="date"></label>
+	<label id="time"></label>
+</section>
+
+
+<div style="position: absolute; top: calc(20% + 100px + 60px); left: calc(48% - 35px);">
+	<section id="managerMenu" class="jq-dropdown jq-dropdown-tip jq-dropdown-relative">
+		<ul class="jq-dropdown-menu" id="managerList">
+			<li><a href="#">Energiesparen</a></li>
+		</ul>
+	</section>
+</div>
+<section id="powerMenu" class="jq-dropdown jq-dropdown-anchor-right">
+	<ul class="jq-dropdown-menu">
+	</ul>
+</section>
+<section id="languageMenu" class="jq-dropdown jq-dropdown-anchor-right">
+	<ul class="jq-dropdown-menu">
+	</ul>
+</section>
+</body>
+
+</html>
