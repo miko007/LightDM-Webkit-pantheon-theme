@@ -32,6 +32,10 @@ GUI.prototype.addLoginField = function() {
 		'</span>'
 	);
 	var $this = this;
+	$('#loginbutton').click(function() {
+		$this.greeter.eventlistener.login(13);
+	});
+	var $this = this;
 	$('#password').keydown(function(event) {
 		$this.greeter.eventlistener.login(event.keyCode);
 	}).focus();
