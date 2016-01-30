@@ -9,7 +9,7 @@
 }
 
 body {
-	background: url('bg.jpg') no-repeat black;
+	background: url('background.jpg') no-repeat black;
 	background-size: cover;
 	font-family:  "Open Sans", sans-serif;
 	color: white;

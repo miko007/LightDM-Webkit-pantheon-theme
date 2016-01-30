@@ -1,4 +1,5 @@
 var Greeter = function() {
+	this.configManager	= new ConfigManager(this);
 	this.eventlistener	= new EventListener(this);
 
 	var $this = this;
