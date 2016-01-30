@@ -6,7 +6,20 @@ if (typeof lightdm == 'undefined') {
 	lightdm.layouts= [{name: "test", short_description: "test description", short_description:"really long epic description"}];
 	lightdm.default_layout= lightdm.layouts[0];
 	lightdm.layout= lightdm.layouts[0];
-	lightdm.sessions=[{key: "key1", name: "session 1", comment: "no comment"}, {key: "key2", name: "session 2", comment: "no comment"}];
+	lightdm.sessions= [
+	{"name": "GNOME", "key": "gnome", "comment": "Diese Sitzung meldet Sie bei GNOME an"},
+	{
+		"name": "GNOME Flashback (Compiz)",
+		"key": "gnome-flashback-compiz",
+		"comment": "Diese Sitzung meldet Sie in GNOME Flashback mit Compiz an"
+	},
+	{
+		"name": "GNOME Flashback (Metacity)",
+		"key": "gnome-flashback-metacity",
+		"comment": "Diese Sitzung meldet sie in GNOME Flashback mit Metacity an"
+	},
+	{"name": "Ubuntu", "key": "ubuntu", "comment": "This session logs you into Ubuntu"}
+];
 
 	lightdm.default_session=lightdm.sessions[0];
 	lightdm.authentication_user= null;

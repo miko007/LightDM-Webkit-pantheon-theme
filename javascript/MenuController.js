@@ -2,6 +2,7 @@ var MenuController = function(greeter) {
 	this.greeter	= greeter;
 
 	this.buildPowerMenu();
+	this.buildSessionMenu();
 	this.buildLangugageMenu();
 };
 MenuController.prototype.buildPowerMenu = function() {
@@ -14,6 +15,11 @@ MenuController.prototype.buildPowerMenu = function() {
 	if (lightdm.can_shutdown) {
 		$('<li><a href="#" id="shutdown">Herunterfahren</a></li>').appendTo('#powerMenu > ul');
 	}
+};
+MenuController.prototype.buildSessionMenu = function() {
+	lightdm.sessions.forEach(function(manager) {
+		$('<li><a href="#">' + manager.name + '</a></li>').appendTo('#managerMenu > ul');
+	});
 };
 MenuController.prototype.buildLangugageMenu = function() {
 	lightdm.layouts.forEach(function(language) {
