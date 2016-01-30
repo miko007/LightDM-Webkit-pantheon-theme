@@ -26,7 +26,7 @@
 
 <section class="titlebar">
 	<ul>
-		<li><a href="#"><span class="fa fa-wheelchair"></span></a></li>
+		<li><a href="#" data-jq-dropdown="#barrierMenu"><span class="fa fa-wheelchair"></span></a></li>
 		<li><a href="#" data-jq-dropdown="#languageMenu"><span class="fa fa-keyboard-o"></span></a></li>
 		<li><a href="#" data-jq-dropdown="#powerMenu"><span class="fa fa-power-off"></span></a></li>
 	</ul>
@@ -41,11 +41,9 @@
 	<label id="time"></label>
 </section>
 
-
-<div style="position: absolute; top: calc(20% + 100px + 60px); left: calc(48% - 35px);">
+<div style="position: absolute;" id="managerPanel">
 	<section id="managerMenu" class="jq-dropdown jq-dropdown-tip jq-dropdown-relative">
 		<ul class="jq-dropdown-menu" id="managerList">
-			<li><a href="#">Energiesparen</a></li>
 		</ul>
 	</section>
 </div>
@@ -55,6 +53,11 @@
 </section>
 <section id="languageMenu" class="jq-dropdown jq-dropdown-anchor-right">
 	<ul class="jq-dropdown-menu">
+	</ul>
+</section>
+<section id="barrierMenu" class="jq-dropdown jq-dropdown-anchor-right">
+	<ul class="jq-dropdown-menu">
+		<li><a href="#" id="highcontrast"><input type="checkbox" /> Hoher Kontrast</a></li>
 	</ul>
 </section>
 </body>

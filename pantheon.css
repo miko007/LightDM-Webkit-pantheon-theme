@@ -30,6 +30,9 @@ input[type="password"] {
 	font-family: Raleway;
 	box-shadow: 0 0 4px  rgba(30,144,255,0.8);
 }
+input[type="checkbox"] {
+	vertical-align: middle;
+}
 
 .clock {
 	position: absolute;
@@ -163,7 +166,46 @@ input[type="password"] {
 	background: #eee;
 	border-radius: 3px;
 	padding: 4px 6px;
+	text-shadow: none;
 	border: solid 1px #aaa;
 	cursor: pointer;
 	color: #333;
+}
+
+/* HIGH CONTRAST */
+body.highcontrast {
+	text-shadow: 2px 2px 0 black, -2px -2px 0 black, 0 2px 0 black, 2px 0 0 black, 0 -2px 0 black, -2px 0 0 black;
+	font-weight: bold !important;
+}
+body.highcontrast input[type="password"] {
+	border: solid 3px;
+	box-shadow: none;
+}
+body.highcontrast .titlebar {
+	background: black;
+}
+body.highcontrast .titlebar a {
+	font-size: x-large;
+}
+body.highcontrast .user {
+	opacity: 1;
+}
+body.highcontrast .user span {
+	color: black !important;
+}
+body.highcontrast span.loggedin {
+	color: #ffffff !important;
+}
+body.highcontrast .jq-dropdown .jq-dropdown-menu li > a:hover {
+	background: black !important;
+	color: #ffffff !important;
+}
+body.highcontrast #manager {
+	background: black;
+}
+body.highcontrast #manager span {
+	color: #ffffff !important;
+}
+body.highcontrast .userList .user img {
+	box-shadow: 2px 2px 0 black, -2px -2px 0 black, 0 2px 0 black, 2px 0 0 black, 0 -2px 0 black, -2px 0 0 black;
 }

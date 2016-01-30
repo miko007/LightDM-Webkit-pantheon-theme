@@ -2,17 +2,25 @@ var GUI = function(greeter) {
 	this.greeter	= greeter;
 	this.userspace	= 96 + 3;
 	this.margin		= 100;
-	this.listTop	= parseInt($('#userList').css('top'), 10);
+	this.listTop	= GUI.getRawNumber($('#userList').css('top'));
 
 	$('a').click(function(e) {
 		e.preventDefault();
 	});
+
+	$(document).ready(function() {
+		var offset = $('#manager').offset();
+		$('#managerPanel').css('left', offset.left - 15).css('top', offset.top*2 + 10);
+	});
+};
+GUI.getRawNumber = function(value) {
+	return parseInt(value, 10);
 };
 GUI.prototype.animateUser = function(id) {
 	var next = id + 1 < this.greeter.userController.list.length ? id + 1 : id;
 	var last = id - 1 >= 0 ? id - 1 : 0;
 
-	//$('#managerMenu').fadeOut();
+	$('#managerMenu').fadeOut();
 	$('.user > p').html("");
 	var top = this.listTop - ( (id) * this.userspace) - this.margin;
 	$('.user').removeClass('active').removeClass('bright');
@@ -20,8 +28,10 @@ GUI.prototype.animateUser = function(id) {
 	$('#' + this.greeter.userController.currentUser.name).addClass('active').addClass('bright');
 	$('#' + this.greeter.userController.list[next].name).addClass('bright');
 	$('#' + this.greeter.userController.list[last].name).addClass('bright');
-	//$('#manager').remove();
-	//$('<a id="manager" data-jq-dropdown="#managerMenu"><span class="fa fa-gear"></span></a>').prependTo('#' + this.greeter.userController.currentUser.name);
+	if (lightdm.sessions.length > 1) {
+		$('#manager').remove();
+		$('<a id="manager" data-jq-dropdown="#managerMenu"><span class="fa fa-gear"></span></a>').prependTo('#' + this.greeter.userController.currentUser.name);
+	}
 	this.addLoginField();
 };
 GUI.prototype.addLoginField = function() {

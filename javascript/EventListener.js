@@ -28,6 +28,16 @@ var EventListener = function(greeter) {
 		$('#suspend').click(function() {
 			lightdm.suspend();
 		});
+		$('#highcontrast').click(function() {
+			if ($('body').hasClass('highcontrast')) {
+				$('body').removeClass('highcontrast');
+				$(this).find('input').attr('checked', '');
+			}
+			else {
+				$('body').addClass('highcontrast');
+				$(this).find('input').attr('checked', 'checked');
+			}
+		});
 	});
 };
 EventListener.prototype.login = function(keyCode) {
