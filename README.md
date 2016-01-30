@@ -6,6 +6,9 @@ This project provides a theme for `lightdm-webkit2-greeter`, inspired by the `pa
 
 ![](screenshot.png?raw=true)
 
+## Demo
+A live Demo can be found at https://pantheongreeter.mike-ochmann.de
+
 ## Installation
 On Ubuntu, if you already have `lightdm-webkit2-greeter` installed, do the following:
 
