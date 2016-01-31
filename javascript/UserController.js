@@ -18,7 +18,8 @@ UserController.prototype.setCurrent = function (id) {
 		lightdm.cancel_authentication();
 	this.currentUser = this.list[id];
 
-	this.greeter.sessionManager.setSession(this.currentUser.session);
+	var usersSession = this.currentUser.session !== null ? this.currentUser.session : null;
+	this.greeter.sessionManager.setSession(usersSession);
 
 	lightdm.start_authentication(this.currentUser.name);
 	this.greeter.gui.animateUser(id);

@@ -47,9 +47,8 @@ EventListener.prototype.login = function(keyCode) {
 	this.greeter.gui.removeLoginField();
 };
 EventListener.prototype.authenticationComplete = function() {
-	console.log('AAAAAAAAAAA');
 	if (lightdm.is_authenticated) {
-		lightdm.login(this.greeter.userController.currentUser.name, 'gnome');
+		lightdm.login(this.greeter.userController.currentUser.name, this.greeter.sessionManager.session);
 	}
 	else {
 		setTimeout(this.greeter.gui.addLoginField.bind(this), 500);

@@ -34,7 +34,7 @@ if (typeof lightdm == 'undefined') {
 		{ name: "brucew", real_name:"Batman", display_name: "Bruce Wayne", image :"/home/brokenImage.gif", language: "en_US", layout: null, session: null, logged_in: false},
 		{ name: "peterp", real_name:"Spiderman", display_name: "Peter Parker", image :"", language: "en_US", layout: null, session: null, logged_in: true},
 		{ name: "heinz", real_name:"Spiderman", display_name: "Peter Parker", image :"", language: "en_US", layout: null, session: null, logged_in: true},
-		{ name: "karl", real_name:"Spiderman", display_name: "Peter Parker", image :"", language: "en_US", layout: null, session: null, logged_in: true},
+		{ name: "karl", real_name:"Spiderman", display_name: "Peter Parker", image :"", language: "en_US", layout: null, session: "ubuntu", logged_in: true}
 	];
 	lightdm.layouts = [
 		{"name": "us", "short_description": "en", "description": "English (USA)"},
