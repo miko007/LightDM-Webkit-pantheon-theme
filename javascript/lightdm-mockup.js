@@ -30,7 +30,7 @@ if (typeof lightdm == 'undefined') {
 	lightdm.can_shutdown= true;
 
 	lightdm.users= [
-		{ name: "clarkk", real_name:"Superman", display_name: "Clark Kent", image :"", language: "en_US", layout: null, session: null, logged_in: true, is_authenticated: true },
+		{ name: "clarkk", real_name:"Superman", display_name: "Clark Kent", image :"", language: "en_US", layout: null, session: "gnome", logged_in: true, is_authenticated: true },
 		{ name: "brucew", real_name:"Batman", display_name: "Bruce Wayne", image :"/home/brokenImage.gif", language: "en_US", layout: null, session: null, logged_in: false},
 		{ name: "peterp", real_name:"Spiderman", display_name: "Peter Parker", image :"", language: "en_US", layout: null, session: null, logged_in: true},
 		{ name: "heinz", real_name:"Spiderman", display_name: "Peter Parker", image :"", language: "en_US", layout: null, session: null, logged_in: true},

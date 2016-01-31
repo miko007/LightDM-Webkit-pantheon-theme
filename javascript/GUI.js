@@ -9,8 +9,7 @@ var GUI = function(greeter) {
 	});
 
 	$(document).ready(function() {
-		var offset = $('#manager').offset();
-		$('#managerPanel').css('left', offset.left - 15).css('top', offset.top*2 + 10);
+		$('#managerMenu').css('left', $('.user').first().offset().left - 1).css('top', $('.user').first().offset().top + 40);
 	});
 };
 GUI.getRawNumber = function(value) {
@@ -19,9 +18,10 @@ GUI.getRawNumber = function(value) {
 GUI.prototype.animateUser = function(id) {
 	var next = id + 1 < this.greeter.userController.list.length ? id + 1 : id;
 	var last = id - 1 >= 0 ? id - 1 : 0;
-
-	$('#managerMenu').fadeOut();
+	var $this = this;
 	$('.user > p').html("");
+	$('#managerMenu').fadeOut();
+
 	var top = this.listTop - ( (id) * this.userspace) - this.margin;
 	$('.user').removeClass('active').removeClass('bright');
 	$('#userList').css('margin-top', top);
@@ -45,7 +45,6 @@ GUI.prototype.addLoginField = function() {
 	$('#loginbutton').click(function() {
 		$this.greeter.eventlistener.login(13);
 	});
-	var $this = this;
 	$('#password').keydown(function(event) {
 		$this.greeter.eventlistener.login(event.keyCode);
 	}).focus();

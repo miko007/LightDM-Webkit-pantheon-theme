@@ -17,8 +17,12 @@ MenuController.prototype.buildPowerMenu = function() {
 	}
 };
 MenuController.prototype.buildSessionMenu = function() {
+	var $this = this;
 	lightdm.sessions.forEach(function(manager) {
-		$('<li><a href="#">' + manager.name + '</a></li>').appendTo('#managerMenu > ul');
+		$('<li><a href="#" id="session_' + manager.key + '"><input type="radio" class="session" id="' + manager.key + '" /> <label for="' + manager.key + '">' + manager.name + '</label></a></li>').appendTo('#managerMenu > ul');
+		$('#session_' + manager.key).click(function() {
+			$this.greeter.sessionManager.setSession(manager.key);
+		});
 	});
 };
 MenuController.prototype.buildLangugageMenu = function() {

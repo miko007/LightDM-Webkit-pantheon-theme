@@ -55,6 +55,11 @@ input[type="checkbox"] {
 .jq-dropdown .jq-dropdown-menu li > a:hover {
 	background: #dfdfdf !important;
 }
+.jq-dropdown .jq-dropdown-menu label {
+	display: inline-block !important;
+	background: transparent !important;
+	width: 100%;
+}
 
 .loggedin {
 	background: dodgerblue;

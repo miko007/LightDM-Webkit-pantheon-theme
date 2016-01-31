@@ -1,5 +1,6 @@
 var Greeter = function() {
 	this.configManager	= new ConfigManager(this);
+	this.sessionManager	= new SessionManager(this);
 	this.eventlistener	= new EventListener(this);
 
 	var $this = this;
@@ -10,10 +11,10 @@ var Greeter = function() {
 		$this.eventlistener.showPrompt(value);
 	};
 
-	this.userController	= new UserController(this);
-	this.clock			= new Clock(this);
-	this.gui			= new GUI(this);
-	this.menuController	= new MenuController(this);
+	this.userController		= new UserController(this);
+	this.clock				= new Clock(this);
+	this.gui				= new GUI(this);
+	this.menuController		= new MenuController(this);
 
 	this.clock.update();
 	this.userController.generate();

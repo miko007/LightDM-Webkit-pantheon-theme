@@ -10,11 +10,16 @@ UserController.prototype.generate = function() {
 	})
 };
 UserController.prototype.setCurrent = function (id) {
+	if (this.currentUser != null && id == this.currentUser.id)
+		return;
 	if (id > this.list.length - 1 || id < 0)
 		return;
 	if (this.currentUser === null)
 		lightdm.cancel_authentication();
 	this.currentUser = this.list[id];
+
+	this.greeter.sessionManager.setSession(this.currentUser.session);
+
 	lightdm.start_authentication(this.currentUser.name);
 	this.greeter.gui.animateUser(id);
 };

@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="javascript/dropdown.min.js"></script>
 
 	<script type="text/javascript" src="javascript/ConfigManager.js"></script>
+	<script type="text/javascript" src="javascript/SessionManager.js"></script>
 	<script type="text/javascript" src="javascript/UserController.js"></script>
 	<script type="text/javascript" src="javascript/EventListener.js"></script>
 	<script type="text/javascript" src="javascript/GUI.js"></script>
@@ -25,7 +26,6 @@
 </head>
 
 <body>
-
 <section class="titlebar">
 	<ul>
 		<li><a href="#" data-jq-dropdown="#barrierMenu"><span class="fa fa-wheelchair"></span></a></li>
@@ -43,12 +43,10 @@
 	<label id="time"></label>
 </section>
 
-<div style="position: absolute;" id="managerPanel">
-	<section id="managerMenu" class="jq-dropdown jq-dropdown-tip jq-dropdown-relative">
-		<ul class="jq-dropdown-menu" id="managerList">
-		</ul>
-	</section>
-</div>
+<section id="managerMenu" class="jq-dropdown jq-dropdown-tip">
+	<ul class="jq-dropdown-menu" id="managerList">
+	</ul>
+</section>
 <section id="powerMenu" class="jq-dropdown jq-dropdown-anchor-right">
 	<ul class="jq-dropdown-menu">
 	</ul>
