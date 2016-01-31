@@ -177,6 +177,12 @@ input[type="checkbox"] {
 	color: #333;
 }
 
+#languageMenu {
+	height: 70%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
 /* HIGH CONTRAST */
 body.highcontrast {
 	text-shadow: 2px 2px 0 black, -2px -2px 0 black, 0 2px 0 black, 2px 0 0 black, 0 -2px 0 black, -2px 0 0 black;
