@@ -53,7 +53,7 @@ EventListener.prototype.authenticationComplete = function() {
 	else {
 		setTimeout(this.greeter.gui.addLoginField.bind(this), 500);
 		$('#password').val("").focus();
-		$('#' + this.greeter.userController.currentUser.name).effect('shake');
+		$('#' + this.greeter.userController.currentUser.name).effect('shake', {times: 2}, 700);
 		lightdm.start_authentication(this.greeter.userController.currentUser.name);
 	}
 };
