@@ -1,4 +1,4 @@
-var Greeter = function() {
+var PantheonGreeter = function() {
 	this.configManager	= new ConfigManager(this);
 	this.sessionManager	= new SessionManager(this);
 	this.eventlistener	= new EventListener(this);

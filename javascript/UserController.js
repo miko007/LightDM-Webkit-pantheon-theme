@@ -6,7 +6,7 @@ var UserController = function(greeter) {
 UserController.prototype.generate = function() {
 	$this = this;
 	lightdm.users.forEach(function(user) {
-		new User($this.greeter, user);
+		new PantheonUser($this.greeter, user);
 	})
 };
 UserController.prototype.setCurrent = function (id) {

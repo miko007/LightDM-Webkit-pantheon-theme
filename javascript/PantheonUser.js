@@ -1,4 +1,4 @@
-var User = function (greeter, lightdmuser) {
+var PantheonUser = function (greeter, lightdmuser) {
 	this.greeter		= greeter;
 	this.defaultAvatar	= "./avatar.svg";
 	this.user			= lightdmuser;
@@ -10,7 +10,7 @@ var User = function (greeter, lightdmuser) {
 	this.setImage();
 	this.greeter.userController.list.push(this.user);
 };
-User.prototype.setImage = function() {
+PantheonUser.prototype.setImage = function() {
 	var img = document.getElementById('image_' + this.user.name);
 	img.src = this.avatar;
 	var $this = this;

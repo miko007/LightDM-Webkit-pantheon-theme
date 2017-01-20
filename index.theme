@@ -1,7 +1,7 @@
 [theme]
 name=Pantheon
-description=Pantheon Greeter for lightdm-WebKit
-engine=lightdm-webkit-greeter
+description=Pantheon Greeter for lightdm-WebKit2
+engine=lightdm-webkit2-greeter
 url=index.html
 session=gnome
 
